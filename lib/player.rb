@@ -5,7 +5,7 @@ class Player
       case
       when color == secret_code[index]
         puts "Color #{color} is correct and in the right position at #{index}"
-      when secret_code.include?(color)
+      when secret_code.include?(color) && color != secret_code[index]
         puts "Color #{color} is correct but in the wrong position"
       else
         puts "Color #{color} is not in the secret code"
